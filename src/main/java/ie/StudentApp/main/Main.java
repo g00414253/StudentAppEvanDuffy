@@ -1,10 +1,12 @@
 package ie.StudentApp.main;
 
- public class Student{
+import java.util.Scanner;
+
+public class Student{
 
     // Student Info
     String firstName,lastName;
-    long Course,email;
+    String Course,email;
 
 //Constructor
      public Student(String firstName,String lastName,long Course,long email){
@@ -22,8 +24,25 @@ package ie.StudentApp.main;
          this.email=g00414253;
      }
 
+//Function to collect info
+     public void getInfo(){
+         Scanner scanner= new Scanner(System.in);
 
+         System.out.println("Enter first name: ");
+         this.firstName=scanner.nextLine();
 
+         System.out.println("Enter last name: ");
+         this.lastName=scanner.nextLine();
+
+         System.out.println("Enter course name: ");
+         this.Course=scanner.nextLine();
+
+         System.out.println("Enter email: ");
+         this.email=scanner.nextLine();
+
+     }
+
+//Function to display info
 public void displayInfo(){
     System.out.println("Name: " + firstName "" + lastName ", Email: " + email ", Course: " + Course);
 }
